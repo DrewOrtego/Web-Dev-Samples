@@ -13,7 +13,8 @@ I completed these projects as part of the requirements for the now defunct O'Rei
 
 **Usage:**
 
-    Can be seen in any web browser. The Ajax project requires a web server to be displayed correctly. IIS is what I used to do this.
+    Can be seen in any web browser. The Ajax project requires a web server to be displayed correctly. 
+    IIS is what I used to do this.
     
 **Purpose:**
 
