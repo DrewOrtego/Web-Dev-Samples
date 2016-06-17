@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<title>To-Do List with Map</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="http://js.arcgis.com/3.12/dijit/themes/claro/claro.css">
+  <link rel="stylesheet" href="http://js.arcgis.com/3.12/esri/css/esri.css">
+  <link rel="stylesheet" href="ToDo.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="Modernizr\\Modernizr.js"></script>
+  <script>
+    Modernizr.load([
+      {
+        test: Modernizr.localstorage,
+        yep : "Modernizr\\activeLS.js",
+        nope: "Modernizr\\inactiveLS.js",
+        complete: function() {
+          getTodoItems();
+        }
+      },
+    ]);
+  </script>
+  <script src="EsriAPI\Dojo.js"></script>
+  <script src="EsriAPI\EsriAPI.js"></script>
+  <script src="ToDo.js"></script>
+</head>
+<body>
+
+  <div class="col-sm-8">
+    <!-- Add New ToDo Items -->
+    <form>
+      <fieldset>
+        <legend>To Do List</legend>
+        <ul id="todoList">
+        </ul>
+      </fieldset>
+    </form>
+    <form>
+      <fieldset>
+          <legend>Add a New ToDo Item</legend>
+          <div class="tableContainer">
+            <div class="tableRow">
+              <label for="task">Task: </label>
+                <input type="text" id="task" size="35" placeholder="get milk">
+            </div>
+            <div class="tableRow">
+              <label for="who">Assigned to: </label>
+                <input type="text" id="who" size ="35" placeholder="Scott">
+            </div>
+            <div class="tableRow">
+              <label for="dueDate">Due Date: </label>
+                <input type="date" id="dueDate">
+            </div>
+            <div class="tableRow">
+              <label for "location">Location: </label>
+                <input type="text" id="location" size ="35" placeholder="(Optional) Enter a location to geocode">
+            </div>
+            <div class="tableRow">
+              <label for="submit"></label>
+              <input type="button" id="submit" value="Submit" class="btn btn-primary">
+            </div>
+          </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="col-sm-4">
+    <!-- Search ToDo Items -->
+    <form>
+      <fieldset>
+        <label for="searchTerm">Search:</label>
+        <input type="text" id="searchTerm" size="35" placeholder="enter your text">
+        <input type="button" id="searchButton" class="btn btn-success btn-sm" value="Search">
+        <input type="button" id="clearSearch" class="btn btn-danger btn-sm" value="Clear"><br><br>
+      </fieldset>
+    </form>
+    <br>
+    <form>
+        <fieldset>
+            <legend>Search Results</legend>
+            <div id = "searchResults">
+              <ul id="searchResultsList"></ul>
+            </div>
+        </fieldset>
+    </form>
+    <br>
+  <!-- Esri JavaScript API Map -->
+  <div id="mapWindow">
+    <div id="mainWindow" 
+        data-dojo-type="dijit/layout/BorderContainer"
+        data-dojo-props="design:'sidebar', gutters:false">
+      <!--div id="map" class="map"
+        data-dojo-type="dijit/layout/ContentPane" 
+        data-dojo-props="region:'center'"-->
+        <div id="map" class="map">
+          <div id="BasemapToggle">
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

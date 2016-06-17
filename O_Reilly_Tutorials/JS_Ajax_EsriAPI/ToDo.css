@@ -1,0 +1,92 @@
+html, body { 
+    height: 100%; width: 99%;
+    margin: 0; padding: 3px;
+    font-family: Helvetica, Ariel, sans-serif;
+}
+legend {
+    font-weight: bold;
+}
+div.tableContainer {
+    display: table;
+    border-spacing: 5px;
+}
+div.tableRow {
+    display: table-row;
+}
+div.tableRow label {
+    display: table-cell;
+    text-align: right;
+}
+div.tableRow input {
+    display: table-cell;
+}
+ul#todoList {
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+ul#todoList li {
+    position: relative;
+    padding: 5px;
+    margin: 5px;
+    border: 2px inset #ededed;
+}
+ul#todoList li span.notDone {
+    border: 1px solid white;
+    margin-right: 10px;
+    background-color: #FF6666;
+    cursor: pointer; /* change the cursor to a pointer */
+}
+ul#todoList li span.done {
+    border: 1px solid white;
+    margin-right: 10px;
+    background-color: #80CC80;
+    cursor: pointer; /* change the cursor to a pointer */
+}
+ul#todoList li span.delete {
+    display: inline-block; /* allows image to be displayed since span defaults to text */
+    position: absolute;
+    right: 10px; /* positions the X 10 pixels to the right of the li element */
+    cursor: pointer; /* change the cursor to a pointer */
+}
+ul#todoList li span.date {
+    display: inline-block;
+    position: absolute;
+    right: 100px; /* positions the X 10 pixels to the right of the li element */
+    cursor: pointer; /* change the cursor to a pointer */
+}
+ul#todoList li span.img {
+    width: 16px;
+    height: 16px;
+    left: 25px;
+    margin: 0;
+}
+#searchTerm {
+    margin: 5px 5px 5px 0px;
+}
+#mapWindow {
+    border: solid 1px #343642;
+    margin: 5px 2px 5px 2px;
+}
+#map {
+    height: 100%;
+    width: 100%;
+}
+#BasemapToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 50;
+}
+#addressButton {
+    bottom: 1px;
+    margin-right: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.bg_red {
+    background-color: #FF8888;
+}
+.bg_green {
+    background-color: #C6E6C6;
+}

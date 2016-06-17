@@ -1,0 +1,136 @@
+﻿body {
+	background: #333333 url('bg.jpg') repeat;
+	font-family: 'Lato', 'Josefin Sans', 'Raleway', sans-serif;
+  margin:0;
+}
+
+#header {
+	background-color:black;
+	color:#FFFFFF;
+	font-family:'Josefin Sans';
+  position: relative;
+	padding: 5px 0px 5px 0px;
+	text-align:center;
+	text-transform:uppercase;
+}
+
+#menu {
+	background-color:#DDDDDD;
+  height:20px;
+  margin-bottom:5px;
+	padding-bottom:2px;
+	text-align:center;
+}
+
+#menu ul {
+  margin:0px;
+}
+
+#menu li {
+	display:inline;
+	margin-right:-4px;/* allow borders to overlap */
+}
+
+#menu a {
+	border-left:thin #888888 solid;
+	border-right:thin #888888 solid;
+	color:#000000;
+	padding:0px 25px 2px 25px;
+	text-decoration:none;/* removes underline */
+}
+
+#menu a:visited {
+  color:#000000;
+}
+
+#menu a:hover {
+  color:#FFFFFF;
+}
+
+#content {
+  box-shadow:0px 2px 10px 7px #CCCCCC;
+  background-color:#CCCCCC;
+  color:#333333;
+  width:650px;
+  padding:5px 15px 5px 15px;
+  margin:auto;
+}
+
+#content a {
+	color:#000000;
+  text-decoration: none;
+}
+
+#content a:hover {
+	color:#FFFFFF;
+}
+
+.img {
+	display:inline;
+	text-align:left;
+	margin:2px;
+	text-align:center;
+}
+
+.img img {
+	border:1px solid #000000;
+}
+
+.img a {
+  text-decoration:none;
+}
+
+#content h2 {
+	color:#000000;
+	font-family: 'Josefin Sans', 'Raleway', sans-serif;
+	text-transform:uppercase;
+}
+
+#content h3 {
+  color: #000000;
+}
+
+.job {
+	margin: -18px 0px -5px 0px;
+}
+
+.school {
+  margin: 0px 0px -10px 0px;
+}
+
+#content caption {
+  font-weight: bold;
+}
+
+#content th {
+  padding-right: 5px;
+  text-align: left;
+}
+
+#strongList li {
+	font-weight:bold;
+}
+
+#footer {
+	color:#FFFFFF;
+	font-family: 'Josefin Sans', 'Lato', 'Raleway', sans-serif;
+  margin:auto;
+	width:650px;
+}
+
+#footer a {
+  color:#CCCCCC;
+}
+
+#footer a:visited {
+  color:#CCCCCC;
+}
+
+#linkedin {
+  position: relative;
+  top: 7px;
+}
+
+#job {
+	line-height:5% !important;
+}
